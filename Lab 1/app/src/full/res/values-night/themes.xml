@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AmericansAreAsleepUpvoteTheMetricSystem" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- Button Styles -->
+    <style name="GoButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="colorButtonNormal">@color/ok_green_color</item>
+        <item name="colorControlHighlight">#116e11</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="colorAccent">@color/selected_green_color</item>
+    </style>
+
+    <style name="SkipButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="colorButtonNormal">#ededed</item>
+        <item name="colorControlHighlight">#b2f3b2</item>
+        <item name="android:textColor">@color/black_text_color</item>
+    </style>
+    <style name="textedit" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="colorButtonNormal">#ededed</item>
+        <item name="colorControlHighlight">#b2f3b2</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="NumbersButtons">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity"> center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="colorPrimary">@color/white_text_color</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+</resources>
