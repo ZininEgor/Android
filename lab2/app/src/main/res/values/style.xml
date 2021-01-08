@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FontStyle">
+        <item name="android:textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmall</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLarge</item>
+    </style>
+    <style name="myPopupMenuTextAppearanceSmall" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Small">
+        <item name="android:textSize">?attr/font_medium</item>
+    </style>
+    <style name="myPopupMenuTextAppearanceLarge" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Large">
+        <item name="android:textSize">?attr/font_large</item>
+    </style>
+    <style name="FontStyle.Small">
+        <item name="font_small">8sp</item>
+        <item name="font_medium">10sp</item>
+        <item name="font_large">12sp</item>
+        <item name="font_xlarge">14sp</item>
+    </style>
+    <style name="colorPickerItem">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:foreground">@drawable/select_color</item>
+        <item name="android:background">@drawable/circle</item>
+    </style>
+    <style name="tableRow">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="FontStyle.Medium">
+        <item name="font_small">10sp</item>
+        <item name="font_medium">12sp</item>
+        <item name="font_large">14sp</item>
+        <item name="font_xlarge">16sp</item>
+    </style>
+    <style name="FontStyle.Large">
+        <item name="font_small">12sp</item>
+        <item name="font_medium">14sp</item>
+        <item name="font_large">16sp</item>
+        <item name="font_xlarge">18sp</item>
+    </style>
+</resources>

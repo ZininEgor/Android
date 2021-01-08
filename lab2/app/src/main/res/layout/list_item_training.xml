@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="sleep"
+            type="com.example.timer.database.TitleWorkout" />
+
+        <variable
+            name="clickListener"
+            type="com.example.timer.main.TitleWorkoutListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:src="@drawable/viewholdershape"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
+        android:onClick="@{() -> clickListener.onClick(sleep)}"
+        app:color="@{sleep}"
+        android:textSize="16sp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{sleep}"
+            tools:text="Ready: " />
+
+        <TextView
+            android:id="@+id/Ready"
+            android:layout_width="380dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="88dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/Ready"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:ready="@{sleep}" />
+
+        <TextView
+            android:id="@+id/work"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/Work"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Ready"
+            app:layout_constraintTop_toBottomOf="@+id/Ready"
+            app:work="@{sleep}" />
+
+        <TextView
+            android:id="@+id/chill"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/Chill"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold|normal"
+            app:chill="@{sleep}"
+            app:layout_constraintEnd_toEndOf="@+id/work"
+            app:layout_constraintStart_toStartOf="@+id/work"
+            app:layout_constraintTop_toBottomOf="@+id/work" />
+
+
+        <TextView
+            android:id="@+id/Cycle"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/Cycles"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold|normal"
+            app:Cycle="@{sleep}"
+            app:layout_constraintEnd_toEndOf="@+id/chill"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/chill"
+            app:layout_constraintTop_toBottomOf="@+id/chill" />
+
+        <TextView
+            android:id="@+id/all"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/Total"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold|normal"
+            app:all="@{sleep}"
+            app:layout_constraintEnd_toEndOf="@+id/Cycle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Cycle"
+            app:layout_constraintTop_toBottomOf="@+id/Cycle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

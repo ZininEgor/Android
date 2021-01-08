@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">timer</string>
+    <string name="sleep_tracker_fragment" translatable="false">SleepTrackerFragment</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header" translatable="false">Sync</string>
+
+    <string name="theme">Theme</string>
+    <!-- Messages Preferences -->
+    <string name="signature_title" translatable="false">Your signature</string>
+    <string name="reply_title" translatable="false">Default reply action</string>
+    <string name="locale">Locale</string>
+    <string name="ru">RU</string>
+    <string name="night">Night</string>
+    <string name="light">Light</string>
+    <string name="Pause">Pause</string>
+    <string name="push_to_start">Push -></string>
+    <string name="eng">Eng</string>
+    <string name="timer">Timer</string>
+    <string name="small">small</string>
+    <string name="medium">medium</string>
+    <string name="large">large</string>
+    <string name="cold">Cold</string>
+    <string name="finish">Finish</string>
+    <string name="color">Color</string>
+    <string name="save">Save</string>
+    <string name="size_font">Font Size</string>
+    <string name="delete">Delete</string>
+    <string name="start">Start</string>
+    <string name="name">Name</string>
+    <string name="purple">Purple</string>
+    <string name="Sec">sec</string>
+    <string name="Times">times</string>
+    <string name="drop">drop</string>
+    <string name="dropButton">Clear my data now!</string>
+    <string name="set">Sets</string>
+    <string name="data">My data</string>
+    <string name="chillbetweenset">Chill between set</string>
+    <!-- -->
+    <string name="Ready">Ready</string>
+    <string name="Work">Work</string>
+    <string name="Chill">Chill</string>
+    <string name="Cycles">Cycles</string>
+    <string name="Total">Total</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title" translatable="false">Sync email periodically</string>
+    <string name="attachment_title" translatable="false">Download incoming attachments</string>
+    <string name="attachment_summary_on" translatable="false">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off" translatable="false">Only download attachments when manually requested</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+</resources>
