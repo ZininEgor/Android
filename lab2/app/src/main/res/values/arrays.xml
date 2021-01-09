@@ -1,0 +1,59 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <array name="theme_display">
+        <item>@string/night</item>
+        <item>@string/light</item>
+        <item>@string/purple</item>
+    </array>
+
+    <array name="locale_display">
+        <item>@string/ru</item>
+        <item>@string/eng</item>
+    </array>
+
+
+    <array name="theme_internal">
+        <item>Night</item>
+        <item>Light</item>
+        <item>Purple</item>
+    </array>
+
+    <array name="locale_internal">
+        <item>Ru</item>
+        <item>Eng</item>
+    </array>
+
+    <array name="colors">
+        <item>@color/white</item>
+        <item>@color/purple_200</item>
+        <item>@color/purple_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/purple_500</item>
+
+    </array>
+
+    <array name="fonts_display">
+        <item>@string/small</item>
+        <item>@string/medium</item>
+        <item>@string/large</item>
+    </array>
+    <array name="fonts_internal">
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+    </array>
+</resources>

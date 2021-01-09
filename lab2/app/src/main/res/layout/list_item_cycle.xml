@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="sleep"
+            type="com.example.timer.database.Cycle" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
+        android:textSize="16sp"
+        app:backgroundColor="@{sleep}"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="307dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:padding="0dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:timer="@{sleep}"
+            tools:text="Ready: " />
+
+        <View
+            android:id="@+id/left_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="112dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

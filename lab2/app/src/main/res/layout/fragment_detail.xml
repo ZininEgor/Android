@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Data to make available to the XML via data binding. In this case,
+         the whole ViewModel, so that we can access the LiveData,
+         click handlers, and state variables. -->
+    <data>
+
+
+        <variable
+            name="detailViewModel"
+            type="com.example.timer.workoutdetail.DetailViewModel" />
+    </data>
+
+    <!-- TODO (01) Uncomment the code inside the ConstraintLayout. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".workoutdetail.DetailFragment">
+
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="7dp"
+            android:fontFamily="@font/montserratr"
+            android:onClick="@{()-> detailViewModel.onTimer()}"
+            android:text="@string/start"
+            android:textSize="?attr/font_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="29dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/button14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/text_image"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/icons8_type" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title_string"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="@string/name" />
+
+                    <EditText
+                        android:id="@+id/title"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:ems="10"
+                        android:textSize="?attr/font_xlarge"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:inputType="text"
+                        app:title="@{detailViewModel.night}"
+                        tools:layout_editor_absoluteX="75dp"
+                        tools:layout_editor_absoluteY="148dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/text_image19"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/icons8_color_dropper" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/color_string"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="@string/color" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin= "7dp"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/button_color1"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_margin= "7dp"
+                            android:backgroundTint="#cb75fd"
+                            android:background="@drawable/circle">
+                        </ImageButton>
+                        <ImageButton
+                            android:id="@+id/button_color2"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_margin= "7dp"
+                            android:backgroundTint="#ffcb00"
+                            android:background="@drawable/circle">
+                        </ImageButton>
+                        <ImageButton
+                            android:id="@+id/button_color3"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_margin= "7dp"
+                            android:backgroundTint="#b01717"
+                            android:background="@drawable/circle">
+                        </ImageButton>
+                        <ImageButton
+                            android:id="@+id/button_color4"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_margin= "7dp"
+                            android:backgroundTint="#0b09ae"
+                            android:background="@drawable/circle">
+                        </ImageButton>
+                        <ImageButton
+                            android:id="@+id/button_color5"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_margin= "7dp"
+                            android:backgroundTint="#198c19"
+                            android:background="@drawable/circle">
+                        </ImageButton>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ready_image"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/icons8_boy_avatar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ready_label"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/Ready" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+
+                            android:gravity="center"
+                            android:onClick="@{() -> detailViewModel.minus_ready()}"
+                            android:padding="0dp"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:id="@+id/ready"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:textSize="?attr/font_xlarge"
+                            android:focusable="false"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:inputType="none"
+                            tools:layout_editor_absoluteX="75dp"
+                            tools:layout_editor_absoluteY="148dp" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.plus_ready()}"
+                            android:padding="0dp"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/work_image"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/icons8_triceps" />
+
+                    <ImageView
+                        android:id="@+id/time1_image"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/icons8_time" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/work_label"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/Work" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.minus_work()}"
+                            android:padding="0dp"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+
+                        <EditText
+                            android:id="@+id/work_string"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:textSize="?attr/font_xlarge"
+                            android:focusable="false"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:inputType="none"
+                            tools:layout_editor_absoluteX="75dp"
+                            tools:layout_editor_absoluteY="148dp" />
+
+                        <Button
+                            android:id="@+id/button4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.plus_work()}"
+                            android:padding="0dp"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/chill_image"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/icons8_relax" />
+
+                    <ImageView
+                        android:id="@+id/timer2_image"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/icons8_time" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chill_label"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/Chill" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button9"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.minus_chill()}"
+                            android:padding="0dp"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+
+                        <EditText
+                            android:id="@+id/chill"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:textSize="?attr/font_xlarge"
+                            android:focusable="false"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:inputType="none"
+                            tools:layout_editor_absoluteX="75dp"
+                            tools:layout_editor_absoluteY="148dp" />
+
+                        <Button
+                            android:id="@+id/button6"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.plus_chill()}"
+                            android:padding="0dp"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cycle_image"
+                        android:layout_width="75dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/icons8_available_updates" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cycle_label"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/Cycles" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button7"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.minus_cycle()}"
+                            android:padding="0dp"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+
+                        <EditText
+                            android:id="@+id/cycle"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="?attr/font_xlarge"
+                            android:gravity="center"
+                            tools:layout_editor_absoluteX="75dp"
+                            tools:layout_editor_absoluteY="148dp" />
+
+                        <Button
+                            android:id="@+id/button8"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.plus_cycle()}"
+                            android:padding="0dp"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/timer_image"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/icons8_timer" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/set_label"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/set" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button10"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.minus_set()}"
+                            android:padding="0dp"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+
+                        <EditText
+                            android:id="@+id/set"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:textSize="?attr/font_xlarge"
+                            android:inputType="none"
+                            tools:layout_editor_absoluteX="75dp"
+                            tools:layout_editor_absoluteY="148dp" />
+
+                        <Button
+                            android:id="@+id/button11"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.plus_set()}"
+                            android:padding="0dp"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/sleep_length"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/icons8_armchair" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/quality_string"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/chillbetweenset" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button5"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.minus_chillwithset()}"
+                            android:padding="0dp"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+
+                        <EditText
+                            android:id="@+id/chill_with_set"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:textSize="?attr/font_xlarge"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:inputType="none"
+                            tools:layout_editor_absoluteX="75dp"
+                            tools:layout_editor_absoluteY="148dp" />
+
+                        <Button
+                            android:id="@+id/button13"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/buttonshape"
+                            android:onClick="@{() -> detailViewModel.plus_chillwithset()}"
+                            android:padding="0dp"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="?attr/font_large"
+            android:fontFamily="@font/montserratr"
+            android:onClick="@{()-> detailViewModel.onDeleteTitle()}"
+            android:text="@string/delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button14"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.783" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

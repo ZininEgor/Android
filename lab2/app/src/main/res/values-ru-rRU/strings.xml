@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Таймер</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="messages_header">Сообщение</string>
+    <string name="theme">Тема</string>
+    <string name="locale">Язык</string>
+    <string name="ru">" Русский"</string>
+    <string name="eng">Англиский</string>
+    <string name="night">Ночная</string>
+    <string name="light">Дневная</string>
+    <string name="timer">Таймер</string>
+    <string name="Ready">Подготовка</string>
+    <string name="Work">Работа</string>
+    <string name="Chill">Отдых</string>
+    <string name="Cycles">Циклы</string>
+    <string name="Total">Всего</string>
+    <string name="name">Название</string>
+    <string name="set">Сеты</string>
+    <string name="chillbetweenset">Отдых между сетами</string>
+    <string name="Sec">сек</string>
+    <string name="Times">раз</string>
+    <string name="drop">Удалить мои данные</string>
+    <string name="dropButton">Удалить мои данные!</string>
+    <string name="data">Данные</string>
+    <string name="purple">Пурпурный</string>
+    <string name="Pause">Пауза</string>
+    <string name="push_to_start">Нажми -></string>
+    <string name="size_font">Размер шрифта</string>
+    <string name="delete">Удалить</string>
+    <string name="start">Начать</string>
+    <string name="small">Меньше</string>
+    <string name="medium">"Нормальный "</string>
+    <string name="large">Больше</string>
+    <string name="cold">Остыть</string>
+    <string name="Finish">Финиш</string>
+    <string name="finish">Финиш</string>
+    <string name="color">Цвет</string>
+    <string name="save">" Сохранить"</string>
+</resources>

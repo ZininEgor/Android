@@ -1,0 +1,57 @@
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/theme"
+        android:textSize="?attr/font_medium">
+
+        <DropDownPreference
+            app:allowDividerBelow="true"
+            app:allowDividerAbove="true"
+            android:key="theme"
+            android:title="@string/theme"
+            android:textSize="?attr/font_medium"
+            android:entries="@array/theme_display"
+            app:useSimpleSummaryProvider="true"
+            android:entryValues="@array/theme_internal"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/locale"
+        android:textSize="?attr/font_medium">
+
+        <DropDownPreference
+            app:allowDividerBelow="true"
+            app:allowDividerAbove="true"
+            android:key="locale"
+            android:title="@string/locale"
+            android:textSize="?attr/font_medium"
+            android:entries="@array/locale_display"
+            app:useSimpleSummaryProvider="true"
+            android:entryValues="@array/locale_internal"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/size_font"
+        android:textSize="?attr/font_medium">
+
+        <DropDownPreference
+            app:allowDividerBelow="true"
+            app:allowDividerAbove="true"
+            android:key="font"
+            android:textSize="?attr/font_medium"
+            android:title="@string/size_font"
+            android:entries="@array/fonts_display"
+            app:useSimpleSummaryProvider="true"
+            android:entryValues="@array/fonts_internal"/>
+
+    <PreferenceCategory app:title="@string/data"
+        android:textSize="?attr/font_medium">
+        <Preference
+            android:title="@string/dropButton"
+            android:textSize="?attr/font_medium"
+            android:key="@string/drop"
+            />
+    </PreferenceCategory>
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>
