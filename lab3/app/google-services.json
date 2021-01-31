@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "984146983033",
+    "firebase_url": "https://lab3-a3430-default-rtdb.firebaseio.com",
+    "project_id": "lab3-a3430",
+    "storage_bucket": "lab3-a3430.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984146983033:android:d30b7f38a2c789c4353ca8",
+        "android_client_info": {
+          "package_name": "com.zininegor.lab3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984146983033-unqrkl1ia25oc5gin3vq1uc6qbosefn5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6BJZCqWHLLu8HzJN941NbVC3cd9JQMRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984146983033-unqrkl1ia25oc5gin3vq1uc6qbosefn5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
